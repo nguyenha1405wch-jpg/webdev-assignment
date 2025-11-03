@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyen Thao Ha – Personal Webpage</title>
+
+  <!--
+    CS104 - Assignment 2: Web Development
+    Author: Nguyen Thao Ha
+    This webpage includes:
+    • Part 1: Personal website (about, portfolio, contact)
+    • Part 2: Interactive notebook (HTML + JavaScript)
+    Following Lec_03_WebDevelopment coding style and DOM examples.
+  -->
+
+  <style>
+    /* --------- Minimalist & Elegant Design --------- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header, section, footer {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 1.05em;
+    }
+
+    img.profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-top: 15px;
+      border: 3px solid #d8dee9;
+    }
+
+    img.portfolio-img {
+      width: 180px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+    }
+
+    ul {
+      list-style-type: circle;
+      margin-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: white;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"], button {
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover, button:hover {
+      background-color: #34495e;
+    }
+
+    .note {
+      background-color: #fff;
+      border-left: 4px solid #2c3e50;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Nguyen Thao Ha</h1>
+    <p>I’m a sophomore who believes in turning ideas into value — for people and for the future. I’m passionate about finance, fascinated by philosophy, and driven by the quiet desire to become someone who understands both the human mind and the movement of money.</p>
+    <img class="profile" src="https://drive.google.com/uc?export=view&id=1STiIPJiSyUa-agfDq-J5KPx6j4aceEy1" alt="Professional photo of Nguyen Thao Ha">
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’ve always been drawn to questions — about people, choices, and what gives life meaning. My studies and curiosity often cross paths between psychology, social systems, and the logic of finance. I’m learning to build both emotional and financial independence, believing that the two are deeply connected.</p>
+
+    <ul>
+      <li><strong>Education:</strong> Sophomore at Fulbright University Vietnam</li>
+      <li><strong>Skills:</strong> Communication & storytelling, Emotional intelligence & leadership, Creative research</li>
+      <li><strong>Hobbies:</strong> Reading philosophy and modern psychology, Gym & wellness, Exploring finance and market behavior</li>
+    </ul>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section id="portfolio">
+    <h2>Achievements</h2>
+    <p>Some of the experiences and milestones that have shaped who I am:</p>
+
+    <table>
+      <tr><th>Project</th><th>Description</th></tr>
+      <tr>
+        <td>
+          <strong>Trinh Cong Son Concert</strong><br>
+          <img class="portfolio-img" src="https://drive.google.com/uc?export=view&id=1VCApe3nIg_OVmqq2iGRPiExywAaWVkyK" alt="Trinh Cong Son Concert photo">
+        </td>
+        <td>
+          I assisted in organizing a tribute concert celebrating the life and work of musician Trinh Cong Son, focusing on event flow and audience experience.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Straight-A IGCSE Results</strong><br>
+          <img class="portfolio-img" src="https://drive.google.com/uc?export=view&id=1l9PBWO-pFK7GABtd2YSWHrdKyr8Ec-gP" alt="IGCSE Results photo">
+        </td>
+        <td>
+          I earned top grades across all subjects in the IGCSE program, showcasing consistent academic discipline and curiosity.
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('This form is for display only.');">
+      <label>Name:</label>
+      <input type="text" name="name" placeholder="Your name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="your@email.com" required>
+
+      <label>Message:</label>
+      <textarea name="message" placeholder="Write your message..." rows="4" required></textarea>
+
+      <input type="submit" value="Send Message">
+    </form>
+
+    <p>You can reach me at <strong>nguyenthaoha2005@gmail.com</strong> or phone <strong>0934918282</strong>.</p>
+  </section>
+
+  <!-- ===== NOTEBOOK ===== -->
+  <section id="notebook">
+    <h2>Notebook</h2>
+    <p>Write your thoughts or notes below. They’ll stay on the page until you reload.</p>
+
+    <textarea id="noteInput" placeholder="Type your note here..."></textarea><br>
+    <button id="addNoteBtn">Add Note</button>
+    <button id="clearAllBtn" type="button">Clear All Notes</button>
+
+    <div id="notesContainer"></div>
+
+    <p style="font-size:0.9em; color:#555;">Notes only exist during your current session.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nguyen Thao Ha | CS104 – Web Development Assignment</p>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // DOM references
+    const noteInput = document.getElementById("noteInput");
+    const addNoteBtn = document.getElementById("addNoteBtn");
+    const notesContainer = document.getElementById("notesContainer");
+    const clearAllBtn = document.getElementById("clearAllBtn");
+
+    // Add note function
+    addNoteBtn.addEventListener("click", function() {
+      const text = noteInput.value.trim();
+
+      // Empty note validation
+      if (text === "") {
+        alert("Please type your note before clicking 'Add Note'.");
+        return;
+      }
+
+      // Create new note
+      const newNote = document.createElement("div");
+      newNote.className = "note";
+      newNote.innerText = text;
+
+      // Append note to container
+      notesContainer.appendChild(newNote);
+
+      // Clear input field
+      noteInput.value = "";
+    });
+
+    // Clear all notes
+    clearAllBtn.addEventListener("click", function() {
+      notesContainer.innerHTML = "";
+    });
+  </script>
+</body>
+</html>
