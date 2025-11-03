@@ -178,4 +178,24 @@
     <input type="text" id="noteInput" placeholder="Write a new note..." />
     <button onclick="addNote()">Add Note</button>
     <button onclick="clearNotes()">Clear All Notes</button>
-    <div id="notesList"
+    <div id="notesList" class="notes-list"></div>
+  </section>
+
+  <script>
+    const notesList = document.getElementById('notesList');
+    function addNote() {
+      const input = document.getElementById('noteInput');
+      const noteText = input.value.trim();
+      if (noteText) {
+        const p = document.createElement('p');
+        p.textContent = noteText;
+        notesList.appendChild(p);
+        input.value = '';
+      }
+    }
+    function clearNotes() {
+      notesList.innerHTML = '';
+    }
+  </script>
+</body>
+</html>
