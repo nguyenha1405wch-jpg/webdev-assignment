@@ -11,7 +11,7 @@
   <style>
     body {
       font-family: "Playfair Display", serif;
-      background-color: #f9fafc;
+      background: linear-gradient(to bottom right, #faf4eb, #f9fafc);
       color: #333;
       line-height: 1.7;
       margin: 0;
@@ -19,9 +19,10 @@
     }
     header {
       text-align: center;
-      background-color: #f1f3f6;
+      background-color: rgba(241, 243, 246, 0.8);
       padding: 40px 20px;
       border-bottom: 1px solid #ddd;
+      backdrop-filter: blur(3px);
     }
     header h1 {
       font-size: 2.2em;
@@ -45,12 +46,12 @@
       max-width: 800px;
       margin: 40px auto;
       padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: #fffdf9;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     h2 {
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid #e8e1d5;
       padding-bottom: 8px;
       margin-bottom: 16px;
       color: #2c3e50;
@@ -60,25 +61,32 @@
       list-style-type: circle;
       padding-left: 20px;
     }
+
+    /* Portfolio Section */
     .project-table {
       width: 100%;
       border-collapse: collapse;
     }
     .project-table th, .project-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
+      padding: 18px 10px;
       vertical-align: top;
+      border: none; /* Remove borders */
     }
     .project-table th {
-      background-color: #f3f4f6;
       text-align: left;
+      color: #444;
+      font-weight: 600;
+      font-size: 1.1em;
+      border-bottom: 1px solid #eee;
     }
     .project-table img {
       max-width: 100%;
-      border-radius: 6px;
-      margin-top: 8px;
+      border-radius: 8px;
+      margin-top: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
+    /* Contact section */
     .contact-form label {
       display: block;
       margin-top: 10px;
@@ -106,6 +114,8 @@
     .contact-form button:hover {
       background-color: #1a252f;
     }
+
+    /* Notebook section */
     .note-section {
       text-align: center;
     }
