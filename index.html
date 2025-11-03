@@ -41,7 +41,7 @@
     }
 
     header img {
-      width: 140px; /* smaller size */
+      width: 140px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -75,27 +75,45 @@
     .project-table {
       width: 100%;
       border-collapse: collapse;
+      text-align: center;
     }
 
-    .project-table th, .project-table td {
-      padding: 18px 10px;
-      vertical-align: top;
-      border: none; /* Remove borders */
+    .project-row td {
+      padding: 30px 15px;
+      vertical-align: middle;
     }
 
-    .project-table th {
-      text-align: left;
-      color: #444;
+    .project-card {
+      background-color: #fffaf2;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    .project-card img {
+      max-width: 90%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+      margin-bottom: 8px;
+      color: #2c3e50;
       font-weight: 600;
       font-size: 1.1em;
-      border-bottom: 1px solid #eee;
     }
 
-    .project-table img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .project-card p {
+      font-size: 0.95em;
+      color: #444;
+      line-height: 1.6;
     }
 
     /* Contact section */
@@ -189,21 +207,21 @@
     <h2>Achievements</h2>
     <p>Some of the experiences and milestones that have shaped who I am:</p>
     <table class="project-table">
-      <tr>
-        <th>Project</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><strong>Trinh Cong Son Concert</strong><br>
-          <img src="https://raw.githubusercontent.com/nguyenha1405wch-jpg/webdev-assignment/main/IMG_8882.JPG" alt="Trinh Cong Son Concert photo">
+      <tr class="project-row">
+        <td>
+          <div class="project-card">
+            <img src="https://raw.githubusercontent.com/nguyenha1405wch-jpg/webdev-assignment/main/IMG_8882.JPG" alt="Trinh Cong Son Concert photo">
+            <h3>Trinh Cong Son Concert</h3>
+            <p>I assisted in organizing a tribute concert celebrating the life and work of musician Trinh Cong Son, focusing on event flow and audience experience.</p>
+          </div>
         </td>
-        <td>I assisted in organizing a tribute concert celebrating the life and work of musician Trinh Cong Son, focusing on event flow and audience experience.</td>
-      </tr>
-      <tr>
-        <td><strong>Straight-A IGCSE Results</strong><br>
-          <img src="https://raw.githubusercontent.com/nguyenha1405wch-jpg/webdev-assignment/main/IMG_1796.JPG" alt="IGCSE Results photo">
+        <td>
+          <div class="project-card">
+            <img src="https://raw.githubusercontent.com/nguyenha1405wch-jpg/webdev-assignment/main/IMG_1796.JPG" alt="IGCSE Results photo">
+            <h3>Straight-A IGCSE Results</h3>
+            <p>I earned top grades across all subjects in the IGCSE program, showcasing consistent academic discipline and curiosity.</p>
+          </div>
         </td>
-        <td>I earned top grades across all subjects in the IGCSE program, showcasing consistent academic discipline and curiosity.</td>
       </tr>
     </table>
   </section>
